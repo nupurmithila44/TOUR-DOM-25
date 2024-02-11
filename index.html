@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour of dom</title>
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        li{
+            color: blue;
+        }
+       .biard-container li{
+        color: gold;
+       }
+      #biard{
+        color: black;
+      }
+      .important-places{
+        color: red;
+      }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>welcome to my Dom</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat illo ratione commodi, ab ducimus nihil debitis quibusdam nesciunt nostrum earum tempora labore illum laborum enim quae voluptate? Incidunt, magni fugiat.</p>
+    </header>
+    <main>
+        <section class="placesul">
+            <h1> my awesome </h1>
+            <ul>
+                <li>jalali set</li>
+                <li>safaiet</li>
+                <li>bonobas</li>
+            </ul>
+        </section>
+        <section class="biard-container">
+            <h1 id="biard">biard i like</h1>
+            <ul id="places-list">
+                <li>pakhi</li>
+                <li>moina</li>
+                <li>tiea</li>
+                <li>kokil</li>
+            </ul>
+        </section>
+        <section id ='places-container' class="large-text">
+            <h1> place i like</h1>
+            <ul>
+                <li class="important-places">sondorbon</li>
+                <li class="important-places">coxbazar</li>
+                <li class="important-places">katabon</li>
+            </ul>
+        </section>
+       
+       
+    </main>
+    <script src="js/dom.js"></script>
+    <script src="js/styleinjs.js"></script>
+    <script src="js/append.js"></script>
+    <script>
+   const licollection = document.getElementsByTagName ('li');
+//    console.log(licollection);
+for(const li of licollection){
+    // console.log(li.innerText);
+}
+const allheading = document.getElementsByTagName("h1");
+for( const h1 of allheading){
+    // console.log(h1.innerText);
+}
+const biardall = document.getElementById('biard');
+biardall.innerText = 'biard changed by js'
+
+const places = document.getElementsByClassName('important-places');
+for(const place of places){
+    // console.log(place.innerText)
+
+}
+
+// queryselectorall 
+const someli = document.querySelectorAll('.biard-container li')
+    for(const li of someli){
+        console.log(li.innerText);
+    }
+
+
+  </script>
+</body>
+</html>
